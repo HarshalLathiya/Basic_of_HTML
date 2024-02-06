@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Button with JS</title>
+    <style>
+        h1 { border: solid red }
+        h1 { background-color: yellow }
+        video { border: dashed blue }
+    </style>
+    <script type="text/javascript">
+        function playVideo() {
+            var v = document.getElementsByTagName("video")[0];
+            v.play();
+        }
+
+        function pauseVideo() {
+            var v = document.getElementsByTagName("video")[0];
+            v.pause();
+        }
+
+        function toggleFullScreen() {
+            var v = document.getElementsByTagName("video")[0];
+            if (v.requestFullscreen) {
+                v.requestFullscreen();
+            } else if (v.mozRequestFullScreen) {
+                v.mozRequestFullScreen();
+            } else if (v.webkitRequestFullscreen) {
+                v.webkitRequestFullscreen();
+            } else if (v.msRequestFullscreen) {
+                v.msRequestFullscreen();
+            }
+        }
+    </script>
+</head>
+<body bgcolor="grey">
+    <form name="frm1" method="post">
+        <h1 align="center">Kamani Science College Amreli</h1>
+        <video src="ksc.mp4" width="500" height="300" controls autoplay loop></video>
+        <br>
+        <input type="button" onClick="playVideo();" value="Play">
+        <input type="button" onClick="pauseVideo();" value="Pause">
+        <input type="button" onClick="toggleFullScreen();" value="Full Screen">
+    </form>
+</body>
+</html>
+

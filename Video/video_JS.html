@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>button with JS</title>
+				<style>
+					h1{border: solid red}
+					h1{background-color:yellow}
+					video{border: dashed blue}
+				</style>
+					<script type="text/javascript">
+						function playvideo()	
+						{
+						var v = document.getElementsByTagName("Video")[0];
+						v.play();
+						}
+						function pausevideo()	
+						{
+						var v = document.getElementsByTagName("Video")[0];
+						v.pause();
+						}
+						function maximize() {
+							let v = document.getElementsByTagName("Video")[0];
+							console.log('v tag', v)
+							v.setAttribute('width', '100%');
+							v.setAttribute('height', '90%');
+						}
+						function minimize() {
+							let v = document.getElementsByTagName("Video")[0];
+							console.log('v tag', v)
+							v.setAttribute('width', '500');
+							v.setAttribute('height', '300');
+						}
+					</script>
+		</head>
+		<body bgcolor="cyan">
+		<form name="frm1" method="post">
+	<h1 align="center">Kamani Science Collage Amreli</h1>
+	<video src="ksc.mp4" width="500" height="300" controls autoplay loop></video>
+	<br>
+	<input type="button" onClick="playvideo();" value="play">
+	<input type="button" onClick="pausevideo();" value="pause">
+	<input type="button" onClick="maximize();" value="maximize">
+	<input type="button" onclick="minimize();" value="minimize">
+	</body>
+	</html>
